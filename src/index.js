@@ -1,20 +1,22 @@
 import React, {Component} from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import Search from './components/Search';
-import { BrowserRouter, Route } from 'react-router-dom';
 //import * as serviceWorker from './css/serviceWorker';
 
 class Root extends Component {
   render(){
     return(
+      <div>
       <BrowserRouter>
         <div>
           <Route exact path="/" component={App}/>
           <Route path="/search" component={Search}/>
         </div>
       </BrowserRouter>
-      <App  changeIngredient={this.changeIngredient}/>
+
+    </div>
     )
   }
 

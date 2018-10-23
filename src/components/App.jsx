@@ -3,19 +3,9 @@ import "../css/global.css";
 import Form from "./Form";
 
 class App extends React.Component {
-  constructor(prop){
-    super(prop);
-    this.state={
-      ingredients:"",
-    }
-    this.changeIngredient=this.changeIngredient.bind(this);
-  }
-  changeIngredient(arg){
-    this.setState({
-      ingredients:args,
-    },  this.history.push("/search"){
-
-    })
+  constructor(props){
+    super(props);
+    console.log(props);
   }
   render() {
     return(
