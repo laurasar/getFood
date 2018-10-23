@@ -16,14 +16,31 @@ class Search extends React.Component {
       })
       .then((response) => {
         console.log(response.results);
+        this.setState({
+          recipes: response.results,
+        });
       });
-
   }
 
   render() {
     return (
-      <div>Hello</div>
-    )
+      <div>
+        {
+          this.state.recipes.map( (recipe) => {
+              return (
+                <div>
+                  <h2>{ recipe.title }</h2>
+                  <p>{ recipe.ingredients }</p>
+                  <a href={ `${recipe.href}` } target="_blank">View this recipe now!</a>
+                  <img src={ `${ recipe.thumbnail }` } alt=""/>
+                </div>
+              );
+            }
+          )
+  
+        }
+      </div>
+    );
   }
 
 }
