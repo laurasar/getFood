@@ -9,7 +9,8 @@ class Form extends React.Component {
           type="text"
           id="ingredient"
           name="ingredient"
-          placeholder="ex: Olive Oil" />
+          placeholder="ex: Olive Oil, Oregano"  ref={(input) => {this.formInput = input}
+          }/>
         <input type="submit" value="Find my recipes!" />
       </div>
     );
