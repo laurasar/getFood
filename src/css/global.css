@@ -29,6 +29,23 @@ body {
     box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
 }
 
+.form-inline {
+  margin: 0 auto;
+  padding: 25px 50px 75px 100px;
+  width: 600px;
+  border-radius: 5px;
+  background: white;
+
+}
+
+header {
+  margin: 0 auto;
+  padding: 25px 25px 25px 25px;
+  text-align: center;
+  width: 400px;
+  background: white;
+}
+
 /*.ing-select {
   margin: 0 auto;
   width: 500px;

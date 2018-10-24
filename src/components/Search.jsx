@@ -41,7 +41,6 @@ class Search extends React.Component {
         return response.json();
       })
       .then((response) => {
-        console.log(response.results);
         this.setState({
           recipes: response.results,
         });
