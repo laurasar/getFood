@@ -1,4 +1,5 @@
 import React from 'react';
+import Recipe from "./Recipe";
 
 class Search extends React.Component {
   constructor() {
@@ -49,22 +50,9 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div>
-        {
-          this.state.recipes.map( (recipe) => {
-              return (
-                <div>
-                  <h2>{ recipe.title }</h2>
-                  <p>{ recipe.ingredients }</p>
-                  <a href={ `${recipe.href}` } target="_blank">View this recipe now!</a>
-                  <img src={ `${ recipe.thumbnail }` } alt=""/>
-                </div>
-              );
-            }
-          )
-
-        }
-      </div>
+      <Recipe
+        recipes={ this.state.recipes }
+      />
     );
   }
 

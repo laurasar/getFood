@@ -2,6 +2,7 @@ import React from 'react';
 import "../css/global.css";
 import Form from "./Form";
 import Recipe from "./Recipe";
+import Search from "./Search";
 
 class App extends React.Component {
   constructor(props){

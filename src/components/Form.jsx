@@ -27,7 +27,7 @@ class Form extends React.Component {
             <input type="string" className="form-control" id="inputPassword2" placeholder="Ex: Olive Oil" ref={(input) => {this.formInput = input}
             }/>
           </div>
-          <button type="submit" className="btn btn-primary mb-2">Search Recipes!</button>
+          <button type="submit" className="btn btn-primary mb-2" >Search Recipes!</button>
         </form>
       </div>
     );
