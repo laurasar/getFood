@@ -1,14 +1,26 @@
 import React from "react";
 
 class Form extends React.Component {
+  constructor(){
+    super();
+    this.handleSubmit=this.handleSubmit.bind(this);
+  }
+  handleSubmit(event){
+    event.preventDefault();
+    //grab submission
+    const recipeIn= this.formInput;
+    console.log(recipeIn);
+    //build url "/search?q=ornions,garlic"
+    let path = `/search?i=${recipeIn}`;
+    this.props.history.push(path);
+  }
   render() {
     return(
-
-      <div
-        <form className="form-inline">
+      <div>
+        <form className="form-inline" onSubmit={this.handleSubmit}>
           <div className="form-group mb-2">
             <label for="staticEmail2" className="sr-only">Ingredient</label>
-            <input type="text" readonly className="form-control-plaintext" id="staticEmail2" value="          Enter your ingredients" />
+            <input type="text" readonly className="form-control-plaintext" id="staticEmail2" value="Enter your ingredients" />
           </div>
           <div className="form-group mx-sm-3 mb-2">
             <label for="inputPassword2" className="sr-only">Ex: Olive Oil</label>
@@ -20,6 +32,6 @@ class Form extends React.Component {
       </div>
     );
   }
-}
+  }
 
 export default Form;

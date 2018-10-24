@@ -1,9 +1,12 @@
 import React,{Component} from "react";
+import Recipe from "./Recipe"
 
 class Search extends React.Component{
   render(){
     return(
-      <div>grab ingredients from url</div>
+     <div>
+         <Recipe />
+     </div>
     )
   }
 }

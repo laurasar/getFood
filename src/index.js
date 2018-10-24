@@ -5,25 +5,19 @@ import App from './components/App';
 import Search from './components/Search';
 //import * as serviceWorker from './css/serviceWorker';
 
-class Root extends Component {
-  render(){
+const Root = ()=> {
     return(
-      <div>
       <BrowserRouter>
         <div>
           <Route exact path="/" component={App}/>
-          <Route path="/search" component={Search}/>
+          <Route path="/search/:recipeIn" component={Search}/>
         </div>
       </BrowserRouter>
-
-    </div>
     )
-  }
-
 }
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
