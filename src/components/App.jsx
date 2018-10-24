@@ -5,35 +5,16 @@ import Recipe from "./Recipe";
 import Search from "./Search";
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      ingredients: [],
-      recipes: [],
-    };
-    this.updateRecipes = this.updateRecipes.bind(this);
-    this.updateIngredients = this.updateIngredients.bind(this);
+  constructor(props){
+    super(props);
+
   }
-
-  updateRecipes(result){
-    this.setState({
-    recipes: result,
-    });
-  }
-
-  updateIngredients(keywords){
-    this.setState({
-    ingredients: keywords,
-  });
-}
-
   render() {
     return(
       <div>
-        <h1>Look up recipes for ingredients you have!</h1>
-        <Form
-          updateIngredients={ this.updateIngredients }
-        />
+        <h2>getFood</h2>
+        <h3> Get Recipes for ingredients you have!</h3>
+        <Form history ={this.props.history}/>
       </div>
     )
   }
