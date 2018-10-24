@@ -1,31 +1,29 @@
 import React from "react";
 
+// this component uses Bootstrap to get the style for the cards
+
 class Recipe extends React.Component {
+
   render() {
     return(
-      <div className="recipe-box" >
-        <div className="card" style={{width: 18 + "rem"}}>
-          <img className="card-img-top" src="http://placekitten.com/80/80" alt="Card image cap" />
-          <div className="card-body">
-            <h5 className="card-title">Recipe title</h5>
-            <p className="card-text">Some quick ingredient list.</p>
-            <a href="#" className="btn btn-primary">Complete Recipe</a>
-          </div>
-        </div>
-        <div className="card" style={{width: 18 + "rem"}}>
-          <img className="card-img-top" src="http://placekitten.com/80/80" alt="Card image cap" />
-          <div className="card-body">
-            <h5 className="card-title">Recipe title</h5>
-            <p className="card-text">Some quick ingredient list.</p>
-            <a href="#" className="btn btn-primary">Complete Recipe</a>
-          </div>
-        </div>
-        <div className="card" style={{width: 18 + "rem"}}>
-          <img className="card-img-top" src="http://placekitten.com/80/80" alt="Card image cap" />
-          <div className="card-body">
-            <h5 className="card-title">Recipe title</h5>
-            <p className="card-text">Some quick ingredient list.</p>
-            <a href="#" className="btn btn-primary">Complete Recipe</a>
+      <div>
+        <div className="recipe-box container" >
+          <div className="row" >
+            {
+              this.props.recipes.map( (recipe) => {
+                    return(
+                        <div className="card col-3" style={{width: 18 + "rem"}}>
+                          <img className="img-fluid card-img-top" src={ `${ recipe.thumbnail }` } alt="Card image cap" />
+                          <div className="card-body">
+                            <h5 className="card-title">{ recipe.title }</h5>
+                            <p className="card-text">{ recipe.ingredients }</p>
+                            <a href={ `${ recipe.href }` } className="btn btn-primary">View Recipe</a>
+                          </div>
+                        </div>
+                    );
+                  }
+              )
+            }
           </div>
         </div>
       </div>
