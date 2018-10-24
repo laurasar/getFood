@@ -12,7 +12,7 @@ class Search extends React.Component {
 
     this.searchParams = queryString.parse(props.location.search);
   }
-  
+
   get searchIngredients() {
     const i = this.searchParams.i;
     console.log(i);
