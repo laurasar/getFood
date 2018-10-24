@@ -4,12 +4,16 @@ import Form from "./Form";
 import Recipe from "./Recipe";
 
 class App extends React.Component {
+  constructor(props){
+    super(props);
+
+  }
   render() {
     return(
       <div>
-        <h1>Look up recipes for ingredients you have!</h1>
-        <Form />
-        <Recipe />
+        <h2>getFood</h2>
+        <h3> Get Recipes for ingredients you have!</h3>
+        <Form history ={this.props.history}/>
       </div>
     )
   }

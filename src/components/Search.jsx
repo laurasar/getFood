@@ -19,7 +19,7 @@ class Search extends React.Component {
   get searchQuery() {
     // FIXME: Once everything is routed, we'll need to update this logic
     // to use parameters provided in the query string of this route.
-      
+
     return "omelet";
   }
 
@@ -62,7 +62,7 @@ class Search extends React.Component {
               );
             }
           )
-  
+
         }
       </div>
     );
