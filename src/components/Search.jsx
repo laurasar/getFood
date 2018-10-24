@@ -1,27 +1,27 @@
 import React from 'react';
 import Recipe from "./Recipe";
+import queryString from 'query-string';
 
 class Search extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       recipes: [],
     };
+
+    this.searchParams = queryString.parse(props.location.search);
   }
-
+  
   get searchIngredients() {
-    // FIXME: Once everything is routed, we'll need to update this logic
-    // to use parameters provided in the query string of this route.
-
-    return "onions,garlic";
+    const i = this.searchParams.i;
+    console.log(i);
+    return i ? i : "";
   }
 
   get searchQuery() {
-    // FIXME: Once everything is routed, we'll need to update this logic
-    // to use parameters provided in the query string of this route.
-
-    return "omelet";
+    const q = this.searchParams.q;
+    return q ? q : "";
   }
 
   get searchRequestUrl() {
