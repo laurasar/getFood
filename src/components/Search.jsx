@@ -27,7 +27,7 @@ class Search extends React.Component {
   }
 
   get searchRequestUrl() {
-    const corsBaseUrl = "http://cors.io";
+    const corsBaseUrl = "https://cors.io";
     const requestApiUrl = "http://www.recipepuppy.com/api/";
     // const requestUrl = `${requestApiUrl}`;
     const requestUrl = `${corsBaseUrl}/?${requestApiUrl}`;
