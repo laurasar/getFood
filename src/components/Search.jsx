@@ -15,7 +15,6 @@ class Search extends React.Component {
 
   get searchIngredients() {
     const i = this.searchParams.i;
-    console.log(i);
     return i ? i : "";
   }
 

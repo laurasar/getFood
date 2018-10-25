@@ -9,7 +9,6 @@ class Form extends React.Component {
     event.preventDefault();
     //grab submission
     const recipeIn= this.formInput.value;
-    console.log(recipeIn);
     //build url "/search?q=onions,garlic"
     let path = `/search?i=${recipeIn}`;
     this.props.history.push(path);
@@ -20,7 +19,7 @@ class Form extends React.Component {
         <form className="form-inline" onSubmit={ this.handleSubmit } >
           <div className="form-group mb-2">
             <label for="staticEmail2" className="sr-only">Ingredient</label>
-            <input type="text" readonly className="form-control-plaintext" id="staticEmail2" value="Enter your ingredients" />
+            <input type="text" readonly className="form-control-plaintext" id="staticEmail2" value="Enter your ingredients:" />
           </div>
           <div className="form-group mx-sm-3 mb-2">
             <label for="inputPassword2" className="sr-only">Ex: Olive Oil</label>
